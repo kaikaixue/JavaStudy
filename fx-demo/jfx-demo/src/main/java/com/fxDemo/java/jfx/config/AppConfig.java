@@ -1,6 +1,6 @@
-package com.example.java.jfx.config;
+package com.fxDemo.java.jfx.config;
 
-import com.example.java.jfx.App;
+import com.fxDemo.java.jfx.App;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,11 +18,11 @@ public class AppConfig {
     /**
      * 窗口默认宽度
      */
-    public static int stageWidth = 1000;
+    public static int stageWidth = 640;
     /**
      * 窗口默认高度
      */
-    public static int stageHeight = 600;
+    public static int stageHeight = 480;
     /**
      * 默认允许调整窗口尺寸
      */
