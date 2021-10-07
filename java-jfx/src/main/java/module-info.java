@@ -11,4 +11,7 @@ module com.example.java.jfx {
 
     opens com.example.java.jfx.basic to javafx.fxml;
     exports com.example.java.jfx.basic;
+
+    opens com.example.java.jfx.effect to javafx.fxml;
+    exports com.example.java.jfx.effect;
 }
