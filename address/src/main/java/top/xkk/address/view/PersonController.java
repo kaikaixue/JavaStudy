@@ -20,6 +20,9 @@ public class PersonController {
     private TableView<Person> personTable;
 
     @FXML
+    private FilteredList<Person> filteredDate;
+
+    @FXML
     private TableColumn<Person, String> nameColumn;
 
     @FXML
@@ -87,6 +90,9 @@ public class PersonController {
         personTable.setItems(filteredData);
     }
 
+    /**
+     * 查找用户
+     */
     public void showPersonDetails(Person person) {
         if (person != null) {
             nameLabel.setText(person.getName());
@@ -102,6 +108,22 @@ public class PersonController {
             addressLabel.setText("");
             birthdayLabel.setText("");
             avatar.setImage(new Image("https://train-homework.oss-cn-shanghai.aliyuncs.com/avatar/default_avatar.jpg"));
+        }
+    }
+
+    /**
+     * 删除用户
+     */
+    public void handleDeletePerson() {
+        int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
+        if (selectedIndex >= 0) {
+            mainApp.getPersonData().remove(selectedIndex);
+        } else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setTitle("提示");
+            a.setHeaderText("错误操作");
+            a.setContentText("必须选择人员才能删除");
+            a.showAndWait();
         }
     }
 
@@ -125,5 +147,10 @@ public class PersonController {
     public void reset(ActionEvent actionEvent) {
         ObservableList<Person> personData = mainApp.getPersonData();
         personTable.setItems(personData);
+    }
+
+    public void handleNewPerson() {
+        mainApp.showNewPersonStage();
+        mainApp.getStage().setIconified(true);
     }
 }

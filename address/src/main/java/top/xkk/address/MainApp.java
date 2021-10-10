@@ -5,16 +5,24 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.chart.AreaChart;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import top.xkk.address.model.Person;
 import top.xkk.address.view.PersonController;
+import top.xkk.address.view.PersonEditController;
 
 import java.io.IOException;
 import java.time.LocalDate;
 
 public class MainApp extends Application {
     private final ObservableList<Person> personData = FXCollections.observableArrayList();
+
+    private Stage stage;
+
+    private BorderPane rootLayout;
 
     public MainApp() {
         personData.add(new Person("王林", "软件2026", "男", "江苏南京",
@@ -39,15 +47,61 @@ public class MainApp extends Application {
                 LocalDate.of(2000, 3, 21), new Image("https://niit-soft.oss-cn-hangzhou.aliyuncs.com/purple/img19.jpg")));
     }
 
+    public Stage getStage() {
+        return stage;
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("view/person.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 980, 600);
-        PersonController controller = fxmlLoader.getController();
-        controller.setMainApp(this);
+        this.stage = stage;
         stage.setTitle("AddressBook");
-        stage.setScene(scene);
-        stage.show();
+        initRootLayout();
+        showPerson();
+    }
+
+    public void initRootLayout() {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        try {
+            FXMLLoader fxmlLoader1 = new FXMLLoader();
+            fxmlLoader.setLocation(MainApp.class.getResource("view/root-layout.fxml"));
+            rootLayout = fxmlLoader.load();
+            Scene scene = new Scene(rootLayout,820,540);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showPerson() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(MainApp.class.getResource("view/person.fxml"));
+            AnchorPane anchorPane = fxmlLoader.load();
+            rootLayout.setCenter(anchorPane);
+            PersonController controller = fxmlLoader.getController();
+            controller.setMainApp(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showNewPersonStage() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/person-edit.fxml"));
+            AnchorPane anchorPane = loader.load();
+            Stage editStage = new Stage();
+            editStage.setTitle("Edit Person");
+            Scene scene = new Scene(anchorPane,640,480);
+            editStage.setScene(scene);
+            PersonEditController controller = loader.getController();
+            controller.setEditStage(editStage);
+            controller.setMainApp(this);
+            editStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public ObservableList<Person> getPersonData() {
