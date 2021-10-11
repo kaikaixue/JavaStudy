@@ -9,10 +9,13 @@ import javafx.scene.chart.AreaChart;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import top.xkk.address.model.Person;
+import top.xkk.address.view.BirthdayStatisticsController;
 import top.xkk.address.view.PersonController;
 import top.xkk.address.view.PersonEditController;
+import top.xkk.address.view.RootController;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -20,7 +23,7 @@ import java.time.LocalDate;
 public class MainApp extends Application {
     private final ObservableList<Person> personData = FXCollections.observableArrayList();
 
-    private Stage stage;
+    private Stage primaryStage;
 
     private BorderPane rootLayout;
 
@@ -48,26 +51,30 @@ public class MainApp extends Application {
     }
 
     public Stage getStage() {
-        return stage;
+        return primaryStage;
     }
 
     @Override
     public void start(Stage stage) throws IOException {
-        this.stage = stage;
+        this.primaryStage = stage;
         stage.setTitle("AddressBook");
         initRootLayout();
         showPerson();
     }
 
     public void initRootLayout() {
-        FXMLLoader fxmlLoader = new FXMLLoader();
+
         try {
-            FXMLLoader fxmlLoader1 = new FXMLLoader();
+            FXMLLoader fxmlLoader = new FXMLLoader();
+//            FXMLLoader fxmlLoader1 = new FXMLLoader();
             fxmlLoader.setLocation(MainApp.class.getResource("view/root-layout.fxml"));
             rootLayout = fxmlLoader.load();
+            RootController controller = fxmlLoader.getController();
+            controller.setMainApp(this);
             Scene scene = new Scene(rootLayout,820,540);
-            stage.setScene(scene);
-            stage.show();
+
+            primaryStage.setScene(scene);
+            primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -99,6 +106,42 @@ public class MainApp extends Application {
             controller.setEditStage(editStage);
             controller.setMainApp(this);
             editStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showEditPerson(Person person, String type) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(MainApp.class.getResource("view/person-edit.fxml"));
+            AnchorPane editPersonPane = fxmlLoader.load();
+            // 根布局中间部分加入人员编辑面板
+            rootLayout.setCenter(editPersonPane);
+            // 获得PersonEditController控制器
+            PersonEditController controller = fxmlLoader.getController();
+            // 向控制器传参
+            controller.setArgs(person, type);
+            controller.setMainApp(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showBirthdayStatistics() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/birthday-statistics.fxml"));
+            AnchorPane page = loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Birthday Statistics");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+            BirthdayStatisticsController controller = loader.getController();
+            controller.setPersonData(personData);
+            dialogStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -90,7 +90,7 @@
                             <children>
                                 <Button mnemonicParsing="false" styleClass="btn" text="Reset" onAction="#reset"/>
                                 <Button mnemonicParsing="false" styleClass="btn" text="New" onAction="#handleNewPerson"/>
-                                <Button mnemonicParsing="false" styleClass="btn" text="Edit"/>
+                                <Button mnemonicParsing="false" styleClass="btn" text="Edit" onAction="#handleEditPerson"/>
                                 <Button mnemonicParsing="false" styleClass="btn" text="Delete" onAction="#handleDeletePerson"/>
                             </children>
                         </HBox>

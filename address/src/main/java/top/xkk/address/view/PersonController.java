@@ -9,9 +9,11 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import top.xkk.address.MainApp;
+import top.xkk.address.config.AppConstant;
 import top.xkk.address.model.Person;
 import top.xkk.address.util.DateUtil;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -75,7 +77,7 @@ public class PersonController {
         ObservableList<Person> personData = mainApp.getPersonData();
 //        personTable.setItems(personData);
         FilteredList<Person> filteredData = new FilteredList<>(personData, p -> true);
-        inputField.textProperty().addListener((observable,oldValue,newValue) -> {
+        inputField.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(person -> {
                 if (newValue == null || newValue.isEmpty()) {
                     return true;
@@ -143,14 +145,36 @@ public class PersonController {
 //        inputField.setText("");
     }
 
+
     // 重置
     public void reset(ActionEvent actionEvent) {
         ObservableList<Person> personData = mainApp.getPersonData();
         personTable.setItems(personData);
     }
 
+    /**
+     * 新增人员
+     */
     public void handleNewPerson() {
-        mainApp.showNewPersonStage();
-        mainApp.getStage().setIconified(true);
+        Person tempPerson = new Person(
+                "xkk", "软件2020", "男", "江苏南京", LocalDate.of(2002, 11, 11), new Image("https://train-homework.oss-cn-shanghai.aliyuncs.com/avatar/default_avatar.jpg")
+                );
+        mainApp.showEditPerson(tempPerson, AppConstant.NEW_PERSON);
+    }
+
+    /**
+     * 编辑人员
+     */
+    public void handleEditPerson() {
+        Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
+        if (selectedPerson != null) {
+            mainApp.showEditPerson(selectedPerson, AppConstant.EDIT_PERSON);
+        } else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setTitle("提示");
+            a.setHeaderText("错误操作");
+            a.setContentText("必须选择人员才能编辑");
+            a.showAndWait();
+        }
     }
 }

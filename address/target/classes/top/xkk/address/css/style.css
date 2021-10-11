@@ -22,3 +22,7 @@
     -fx-min-height: 35;
     -fx-min-width: 80;
 }
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: transparent;
+}
