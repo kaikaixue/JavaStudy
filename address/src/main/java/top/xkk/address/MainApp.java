@@ -72,7 +72,6 @@ public class MainApp extends Application {
             RootController controller = fxmlLoader.getController();
             controller.setMainApp(this);
             Scene scene = new Scene(rootLayout,820,540);
-
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
