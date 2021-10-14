@@ -3,6 +3,9 @@ module top.xkk.weather {
     requires javafx.fxml;
     requires json.simple;
 
+    requires org.kordamp.ikonli.javafx;
+    requires org.kordamp.ikonli.materialdesign;
+
     opens top.xkk.weather to javafx.fxml;
     exports top.xkk.weather;
 

@@ -12,6 +12,7 @@
         <module>weather-app</module>
         <module>address</module>
         <module>java-basic</module>
+        <module>java-jfx</module>
     </modules>
 
     <properties>
