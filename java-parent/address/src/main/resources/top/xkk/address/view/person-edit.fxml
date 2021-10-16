@@ -9,7 +9,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
 <AnchorPane styleClass="edit-bg" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml" fx:controller="top.xkk.address.view.PersonEditController">
+            xmlns:fx="http://javafx.com/fxml" fx:controller="top.xkk.address.top.xkk.linechar.view.PersonEditController">
     <GridPane alignment="CENTER" prefHeight="240.0" prefWidth="438.0" styleClass="container"
               AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="82.0"
               AnchorPane.topAnchor="75.0">

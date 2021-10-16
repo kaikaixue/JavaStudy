@@ -66,7 +66,7 @@ public class MainApp extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
 //            FXMLLoader fxmlLoader1 = new FXMLLoader();
-            fxmlLoader.setLocation(MainApp.class.getResource("view/root-layout.fxml"));
+            fxmlLoader.setLocation(MainApp.class.getResource("top.xkk.linechar.view/root-layout.fxml"));
             rootLayout = fxmlLoader.load();
             RootController controller = fxmlLoader.getController();
             controller.setMainApp(this);
@@ -81,7 +81,7 @@ public class MainApp extends Application {
     public void showPerson() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(MainApp.class.getResource("view/person.fxml"));
+            fxmlLoader.setLocation(MainApp.class.getResource("top.xkk.linechar.view/person.fxml"));
             AnchorPane anchorPane = fxmlLoader.load();
             rootLayout.setCenter(anchorPane);
             PersonController controller = fxmlLoader.getController();
@@ -94,7 +94,7 @@ public class MainApp extends Application {
     public void showNewPersonStage() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/person-edit.fxml"));
+            loader.setLocation(MainApp.class.getResource("top.xkk.linechar.view/person-edit.fxml"));
             AnchorPane anchorPane = loader.load();
             Stage editStage = new Stage();
             editStage.setTitle("Edit Person");
@@ -112,7 +112,7 @@ public class MainApp extends Application {
     public void showEditPerson(Person person, String type) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(MainApp.class.getResource("view/person-edit.fxml"));
+            fxmlLoader.setLocation(MainApp.class.getResource("top.xkk.linechar.view/person-edit.fxml"));
             AnchorPane editPersonPane = fxmlLoader.load();
             // 根布局中间部分加入人员编辑面板
             rootLayout.setCenter(editPersonPane);
@@ -129,7 +129,7 @@ public class MainApp extends Application {
     public void showBirthdayStatistics() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/birthday-statistics.fxml"));
+            loader.setLocation(MainApp.class.getResource("top.xkk.linechar.view/birthday-statistics.fxml"));
             AnchorPane page = loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Birthday Statistics");

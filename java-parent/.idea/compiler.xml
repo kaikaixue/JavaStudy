@@ -11,6 +11,7 @@
         <module name="java-basic" />
         <module name="address" />
         <module name="weather-app" />
+        <module name="linechart" />
       </profile>
     </annotationProcessing>
   </component>

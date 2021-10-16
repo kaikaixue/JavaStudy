@@ -11,7 +11,7 @@
 <?import javafx.scene.chart.NumberAxis?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="top.xkk.address.view.BirthdayStatisticsController"
+            fx:controller="top.xkk.address.top.xkk.linechar.view.BirthdayStatisticsController"
             prefHeight="400.0" prefWidth="600.0">
     <BarChart fx:id="barChart" prefHeight="620.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0"
               AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0">

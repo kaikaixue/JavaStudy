@@ -13,6 +13,7 @@
         <module>address</module>
         <module>java-basic</module>
         <module>java-jfx</module>
+        <module>linechart</module>
     </modules>
 
     <properties>
