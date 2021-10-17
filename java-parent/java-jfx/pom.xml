@@ -49,6 +49,18 @@
             <artifactId>jfoenix</artifactId>
             <version>9.0.10</version>
         </dependency>
+        <!-- 获取系统信息 -->
+        <dependency>
+            <groupId>com.github.oshi</groupId>
+            <artifactId>oshi-core</artifactId>
+            <version>5.8.2</version>
+        </dependency>
+        <!-- JSON解析 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.78</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -2,6 +2,11 @@ module com.example.java.jfx {
     requires javafx.controls;
     requires javafx.fxml;
 
+    requires com.github.oshi;
+    requires fastjson;
+
+    opens com.example.java.jfx.util to javafx.fxml;
+    exports com.example.java.jfx.util;
 
     opens com.example.java.jfx.ctrl to javafx.fxml;
     exports com.example.java.jfx;
