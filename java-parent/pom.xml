@@ -14,6 +14,8 @@
         <module>java-basic</module>
         <module>java-jfx</module>
         <module>linechart</module>
+        <module>notepad</module>
+        <module>netty-demo</module>
     </modules>
 
     <properties>
