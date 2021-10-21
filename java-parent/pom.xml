@@ -16,6 +16,7 @@
         <module>linechart</module>
         <module>notepad</module>
         <module>netty-demo</module>
+        <module>chat-ui</module>
     </modules>
 
     <properties>

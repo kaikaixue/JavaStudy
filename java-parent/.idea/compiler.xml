@@ -10,6 +10,7 @@
         <module name="java-jfx" />
         <module name="address" />
         <module name="netty-demo" />
+        <module name="chat-ui" />
         <module name="weather-app" />
         <module name="notepad" />
         <module name="java-basic" />
