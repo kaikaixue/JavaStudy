@@ -2,6 +2,9 @@ module top.xkk.chat.ui {
     requires javafx.fxml;
     requires javafx.controls;
 
+    requires org.kordamp.ikonli.javafx;
+    requires org.kordamp.ikonli.materialdesign;
+
     opens top.xkk.chat.ui to javafx.fxml;
     exports top.xkk.chat.ui;
 

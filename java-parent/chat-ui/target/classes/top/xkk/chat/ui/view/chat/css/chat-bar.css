@@ -4,107 +4,41 @@
     -fx-background-radius: 4px 0px 0px 4px;
 }
 
-/* 头像 */
 #barPortrait, #barPortrait:hover, #barPortrait:pressed {
     -fx-background-radius: 2px;
     -fx-background-position: center center;
     -fx-background-repeat: no-repeat;
     -fx-background-size: 50px 50px;
-    -fx-background-color: white;
-    -fx-background-image: url("../img/head/x.jpg");
+    -fx-background-color: #f6f6f6;
+    -fx-background-image: url("https://songshanbbsforum.oss-cn-hangzhou.aliyuncs.com/avatar/file988953564974106485198507151881025477110507856105107787211810757104498954.jpg");
     -fx-cursor: hand;
     -fx-border-width: 1px;
     -fx-border-radius: 2px;
-    -fx-border-color: white;
+    -fx-border-color: #f6f6f6;
 }
 
-/* 聊天 */
-#barChat {
+.bar {
     -fx-background-radius: 2px;
-    -fx-background-position: center center;
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: 30px 30px;
     -fx-background-color: transparent;
-    -fx-background-image: url("../img/system/chat_0.png");
     -fx-cursor: hand;
     -fx-border-width: 1px;
     -fx-border-radius: 2px;
     -fx-border-color: transparent;
 }
 
-#barChat:hover {
-    -fx-background-image: url("../img/system/chat_1.png");
+
+.groupBarChat {
+    -fx-background-color: linear-gradient(to top, #9795f0, #fbc8d4);
 }
 
-#barChat:pressed {
-    -fx-background-image: url("../img/system/chat_2.png");
+.groupBarFriend {
+    -fx-background-color: linear-gradient(to top, #5ee7df, #b490ca);
 }
 
-
-/* 好友 */
-#barFriend {
-    -fx-background-radius: 2px;
-    -fx-background-position: center center;
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: 30px 30px;
-    -fx-background-color: transparent;
-    -fx-background-image: url("../img/system/friend_0.png");
-    -fx-cursor: hand;
-    -fx-border-width: 1px;
-    -fx-border-radius: 2px;
-    -fx-border-color: transparent;
+.groupBarLocation {
+    -fx-background-color: linear-gradient(to right, #eea2a2, #b49fda);
 }
 
-#barFriend:hover {
-    -fx-background-image: url("../img/system/friend_1.png");
-}
-
-#barFriend:pressed {
-    -fx-background-image: url("../img/system/friend_2.png");
-}
-
-
-/* 收藏 */
-#barLocation {
-    -fx-background-radius: 2px;
-    -fx-background-position: center center;
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: 30px 30px;
-    -fx-background-color: transparent;
-    -fx-background-image: url("../img/system/location_0.png");
-    -fx-cursor: hand;
-    -fx-border-width: 1px;
-    -fx-border-radius: 2px;
-    -fx-border-color: transparent;
-}
-
-#barLocation:hover {
-    -fx-background-image: url("../img/system/location_1.png");
-}
-
-#barLocation:pressed {
-    -fx-background-image: url("../img/system/location_2.png");
-}
-
-
-/* 设置 */
-#barSet {
-    -fx-background-radius: 2px;
-    -fx-background-position: center center;
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: 20px 20px;
-    -fx-background-color: transparent;
-    -fx-background-image: url("../img/system/set_0.png");
-    -fx-cursor: hand;
-    -fx-border-width: 1px;
-    -fx-border-radius: 2px;
-    -fx-border-color: transparent;
-}
-
-#barSet:hover {
-    -fx-background-image: url("../img/system/set_1.png");
-}
-
-#barSet:pressed {
-    -fx-background-image: url("../img/system/set_2.png");
+.groupBarSet {
+    -fx-background-color: linear-gradient(to top, #9795f0, #fbc8d4);
 }

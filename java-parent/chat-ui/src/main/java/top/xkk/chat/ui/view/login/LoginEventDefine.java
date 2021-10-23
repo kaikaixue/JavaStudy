@@ -1,5 +1,7 @@
 package top.xkk.chat.ui.view.login;
 
+import javafx.scene.control.Button;
+
 /**
  * 窗体事件定义，例如将登陆、最小化、退出等在这里完成定义
  */
