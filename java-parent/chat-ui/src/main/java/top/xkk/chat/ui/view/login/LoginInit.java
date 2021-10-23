@@ -40,17 +40,17 @@ public abstract class LoginInit extends UIObject {
         setScene(scene);
         initStyle(StageStyle.TRANSPARENT);
         setResizable(false);
-        obtain();
+//        obtain();
         initView();
         initEventDefine();
     }
 
-    private void obtain() {
-        loginMin = $("loginMin");
-        loginClose = $("loginClose");
-        loginButton = $("login_button");
-        userId = $("userId");
-        userPassword = $("userPassword");
-    }
+//    private void obtain() {
+//        loginMin = $("loginMin");
+//        loginClose = $("loginClose");
+//        loginButton = $("login_button");
+//        userId = $("userId");
+//        userPassword = $("userPassword");
+//    }
 
 }

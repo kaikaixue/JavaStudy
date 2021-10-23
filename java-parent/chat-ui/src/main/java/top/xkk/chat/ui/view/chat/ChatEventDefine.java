@@ -33,28 +33,28 @@ public class ChatEventDefine {
     /**
      * 聊天按钮点击事件
      */
-//    private void barChat() {
-//        Button barChat = chatInit.$("barChat", Button.class);
-//        Pane groupBarChat = chatInit.$("groupBarChat", Pane.class);
-//        barChat.setOnAction(event -> {
-//                    switchBarChat(barChat, groupBarChat, true);
-//                    switchBarFriend(chatInit.$("barFriend", Button.class), chatInit.$("groupBarFriend", Pane.class), false);
-//                }
-//        );
-//    }
+    private void barChat() {
+        Button barChat = chatInit.$("barChat", Button.class);
+        Pane groupBarChat = chatInit.$("groupBarChat", Pane.class);
+        barChat.setOnAction(event -> {
+                    switchBarChat(barChat, groupBarChat, true);
+                    switchBarFriend(chatInit.$("barFriend", Button.class), chatInit.$("groupBarFriend", Pane.class), false);
+                }
+        );
+    }
 
     /**
      * 好友按钮点击事件
      */
-//    private void barFriend() {
-//        Button barFriend = chatInit.$("barFriend", Button.class);
-//        Pane groupBarFriend = chatInit.$("groupBarFriend", Pane.class);
-//        barFriend.setOnAction(event -> {
-//                    switchBarChat(chatInit.$("barChat", Button.class), chatInit.$("groupBarChat", Pane.class), false);
-//                    switchBarFriend(barFriend, groupBarFriend, true);
-//                }
-//        );
-//    }
+    private void barFriend() {
+        Button barFriend = chatInit.$("barFriend", Button.class);
+        Pane groupBarFriend = chatInit.$("groupBarFriend", Pane.class);
+        barFriend.setOnAction(event -> {
+                    switchBarChat(chatInit.$("barChat", Button.class), chatInit.$("groupBarChat", Pane.class), false);
+                    switchBarFriend(barFriend, groupBarFriend, true);
+                }
+        );
+    }
 
     /**
      * 切换好友收藏方法
