@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import top.xkk.chat.ui.view.chat.ChatController;
+import top.xkk.chat.ui.view.chat.IChatEvent;
 import top.xkk.chat.ui.view.chat.IChatMethod;
 import top.xkk.chat.ui.view.login.ILoginMethod;
 import top.xkk.chat.ui.view.login.LoginController;
@@ -40,7 +41,8 @@ public class Main extends Application {
                 alert.titleProperty().set("提示");
                 alert.headerTextProperty().set("登陆成功");
                 alert.showAndWait();
-                IChatMethod chat = new ChatController();
+                IChatMethod chat = new ChatController(new IChatEvent() {
+                });
                 chat.doShow();
                 chat.addTalkBox(0, 0, "007", "杨阳学长", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPDgQ9rjH1K43NBDjNBDg_1080_1080.jpg", "我的神", new Date(), true);
                 chat.addTalkBox(0, 0, "006", "尚宇驰学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPDgQ9rjEky8fNAbDNAbA_432_432.jpg", "大哥", new Date(), true);
@@ -48,7 +50,7 @@ public class Main extends Application {
                 chat.addTalkBox(0, 0, "004", "王林学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPDhJzxumu9WXNArLNArI_690_690.jpg", "活跃气氛大师", new Date(), true);
                 chat.addTalkBox(0, 0, "003", "张怡沁学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPD3Irsal6VqvNAm3NAmc_615_621.jpg", "引路人咯", new Date(), true);
                 chat.addTalkBox(0, 0, "002", "王锋学长", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPD4PvNY560XjNArbNAtA_720_694.jpg", "照顾我的锋哥", new Date(), true);
-                chat.addTalkBox(0, 0, "001", "张浩杰学长", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPDhJzxumu9WXNArLNArI_690_690.jpg", "是个问题都能解决，牛", new Date(), true);
+                chat.addTalkBox(0, 0, "001", "张浩杰学长", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPGpNya3ilVQDNAvTNA-k_1001_756.jpg", "是个问题都能解决，牛", new Date(), true);
                 chat.addTalkBox(0, 0, "008", "许老师", "https://t.ly/HEjv", "许老师yyds", new Date(), true);
             }
         });

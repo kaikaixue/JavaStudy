@@ -27,9 +27,9 @@
 }
 
 
-.groupBarChat {
-    -fx-background-color: linear-gradient(to top, #9795f0, #fbc8d4);
-}
+/*.groupBarChat {*/
+/*    -fx-background-color: linear-gradient(to top, #9795f0, #fbc8d4);*/
+/*}*/
 
 .groupBarFriend {
     -fx-background-color: linear-gradient(to top, #5ee7df, #b490ca);
