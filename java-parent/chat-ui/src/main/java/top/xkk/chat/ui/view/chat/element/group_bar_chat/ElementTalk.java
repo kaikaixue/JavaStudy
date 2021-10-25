@@ -9,8 +9,8 @@ import javafx.scene.layout.Pane;
 import top.xkk.chat.ui.view.chat.data.RemindCount;
 import top.xkk.chat.ui.view.chat.data.TalkBoxData;
 import top.xkk.chat.ui.view.chat.data.TalkData;
-import top.xkk.chat.ui.view.util.DateUtil;
-import top.xkk.chat.ui.view.util.Ids;
+import top.xkk.chat.ui.util.DateUtil;
+import top.xkk.chat.ui.util.Ids;
 
 import java.util.Date;
 

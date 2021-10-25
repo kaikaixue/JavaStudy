@@ -5,6 +5,8 @@ module com.example.java.jfx {
     requires com.github.oshi;
     requires fastjson;
 
+    requires java.desktop;
+
     opens com.example.java.jfx.util to javafx.fxml;
     exports com.example.java.jfx.util;
 
@@ -19,4 +21,7 @@ module com.example.java.jfx {
 
     opens com.example.java.jfx.effect to javafx.fxml;
     exports com.example.java.jfx.effect;
+
+    opens com.example.java.jfx.basic.trayicon to javafx.fxml;
+    exports com.example.java.jfx.basic.trayicon;
 }

@@ -5,7 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
-import top.xkk.chat.ui.view.util.AutoSizeTool;
+import top.xkk.chat.ui.util.AutoSizeTool;
 
 public class ElementInfoBox {
 

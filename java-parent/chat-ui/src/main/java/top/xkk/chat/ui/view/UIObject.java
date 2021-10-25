@@ -31,13 +31,29 @@ public abstract class UIObject extends Stage {
             root.setCursor(Cursor.CLOSED_HAND);
         });
         root.setOnMouseDragged(event -> {
-            System.out.println("移动窗体");
+//            System.out.println("移动窗体");
             setX(event.getScreenX() + xOffset);
             setY(event.getScreenY() + yOffset);
         });
         root.setOnMouseReleased(event -> {
             root.setCursor(Cursor.DEFAULT);
         });
+    }
+
+    public double x() {
+        return getX();
+    }
+
+    public double y() {
+        return getY();
+    }
+
+    public double width() {
+        return getWidth();
+    }
+
+    public double height() {
+        return getHeight();
     }
 
     /**

@@ -11,8 +11,8 @@ import top.xkk.chat.ui.view.chat.data.RemindCount;
 import top.xkk.chat.ui.view.chat.data.TalkData;
 import top.xkk.chat.ui.view.chat.element.group_bar_chat.ElementInfoBox;
 import top.xkk.chat.ui.view.chat.element.group_bar_chat.ElementTalk;
-import top.xkk.chat.ui.view.util.CacheUtil;
-import top.xkk.chat.ui.view.util.Ids;
+import top.xkk.chat.ui.util.CacheUtil;
+import top.xkk.chat.ui.util.Ids;
 
 import java.util.Date;
 
@@ -188,5 +188,15 @@ public class ChatController extends ChatInit implements IChatMethod{
         talkElement.fillMsgSketch(msg, msgData);
         // 设置位置&选中
         chatView.updateTalkListIdxAndSelected(0, talkElement.pane(), talkElement.msgRemind(), idxFirst, selected, isRemind);
+    }
+
+    @Override
+    public double getToolFaceX() {
+        return x() + width() - 960;
+    }
+
+    @Override
+    public double getToolFaceY() {
+        return y() + height() - 180;
     }
 }

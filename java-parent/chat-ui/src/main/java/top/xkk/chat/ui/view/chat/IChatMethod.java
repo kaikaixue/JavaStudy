@@ -73,4 +73,18 @@ public interface IChatMethod {
      * @param userHead     头像图片名称
      */
     void setUserInfo(String userId, String userNickName, String userHead);
+
+    /**
+     * 工具栏表情框体位置：X
+     *
+     * @return X
+     */
+    double getToolFaceX();
+
+    /**
+     * 工具栏表情框体位置：Y
+     *
+     * @return Y
+     */
+    double getToolFaceY();
 }

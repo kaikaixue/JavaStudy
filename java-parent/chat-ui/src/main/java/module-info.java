@@ -16,4 +16,7 @@ module top.xkk.chat.ui {
 
     opens top.xkk.chat.ui.view.chat to javafx.fxml;
     exports top.xkk.chat.ui.view.chat;
+
+    opens top.xkk.chat.ui.view.face to javafx.fxml;
+    exports top.xkk.chat.ui.view.face;
 }
