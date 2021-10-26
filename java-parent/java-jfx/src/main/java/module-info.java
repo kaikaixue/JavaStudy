@@ -24,4 +24,7 @@ module com.example.java.jfx {
 
     opens com.example.java.jfx.basic.trayicon to javafx.fxml;
     exports com.example.java.jfx.basic.trayicon;
+
+    opens com.example.java.jfx.basic.animate to javafx.fxml;
+    exports com.example.java.jfx.basic.animate;
 }
