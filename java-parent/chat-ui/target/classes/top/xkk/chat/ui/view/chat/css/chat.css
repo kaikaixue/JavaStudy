@@ -7,6 +7,15 @@
 @import "group_bar_chat/chat_txt.css";
 @import "group_bar_chat/chat_tool.css";
 
+@import "group_bar_friend/chat_content.css";
+@import "group_bar_friend/chat_friend.css";
+@import "group_bar_friend/chat_friend_group.css";
+@import "group_bar_friend/chat_friend_new.css";
+@import "group_bar_friend/chat_friend_user.css";
+@import "group_bar_friend/chat_operation.css";
+@import "group_bar_friend/chat_search.css";
+@import "group_bar_friend/group_bar_friend.css";
+
 
 #chat {
     -fx-background-radius: 4px;

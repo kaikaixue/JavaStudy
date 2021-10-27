@@ -2,6 +2,8 @@ package top.xkk.chat.ui.view;
 
 import javafx.scene.Cursor;
 import javafx.scene.Parent;
+import javafx.scene.control.ListView;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 
@@ -66,4 +68,10 @@ public abstract class UIObject extends Stage {
      */
     public abstract void initEventDefine();
 
+    @SafeVarargs
+    public final void clearViewListSelectedAll(ListView<Pane>... listViews) {
+        for (ListView<Pane> listView : listViews) {
+            listView.getSelectionModel().clearSelection();
+        }
+    }
 }

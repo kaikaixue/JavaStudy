@@ -44,20 +44,37 @@ public class Main extends Application {
                 IChatMethod chat = new ChatController(new IChatEvent() {
                 });
                 chat.doShow();
-                chat.addTalkBox(0, 0, "007", "杨阳学长", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPDgQ9rjH1K43NBDjNBDg_1080_1080.jpg", "我的神", new Date(), true);
-                chat.addTalkBox(0, 0, "005", "陈蓉琪学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPDgQ9rjAoNR3NAsPNArQ_692_707.jpg", "啥问题都能解决", new Date(), true);
-                chat.addTalkBox(0, 0, "004", "王林学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPDhJzxumu9WXNArLNArI_690_690.jpg", "活跃气氛大师", new Date(), true);
-                chat.addTalkBox(0, 0, "003", "张怡沁学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPD3Irsal6VqvNAm3NAmc_615_621.jpg", "引路人咯", new Date(), true);
+                chat.addTalkBox(0, 0, "007", "杨阳学长", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/yy.jpg", "我的神", new Date(), true);
+                chat.addTalkBox(0, 0, "005", "陈蓉琪学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/crq.jpg", "啥问题都能解决", new Date(), true);
+                chat.addTalkBox(0, 0, "004", "王林学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/wl.jpg", "活跃气氛大师", new Date(), true);
+                chat.addTalkBox(0, 0, "003", "张怡沁学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/zyq.jpg", "引路人咯", new Date(), true);
 
 //                chat.addTalkMsgUserLeft("002","好好学习", new Date(), true, false, true);
-                chat.addTalkBox(0, 0, "001", "张浩杰学长", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPGpNya3ilVQDNAvTNA-k_1001_756.jpg", "是个问题都能解决，牛", new Date(), true);
-                chat.addTalkBox(0, 0, "008", "许老师", "https://t.ly/HEjv", "许老师yyds", new Date(), true);
-                chat.addTalkBox(0, 0, "002", "王锋学长", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPD4PvNY560XjNArbNAtA_720_694.jpg", "照顾我的锋哥", new Date(), true);
+                chat.addTalkBox(0, 0, "001", "张浩杰学长", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/zhj.jpg", "是个问题都能解决，牛", new Date(), true);
+                chat.addTalkBox(0, 0, "008", "许老师", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/mqxu.jpg", "许老师yyds", new Date(), true);
+                chat.addTalkBox(0, 0, "002", "王锋学长", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/wf.jpg", "照顾我的锋哥", new Date(), true);
                 chat.addTalkMsgRight("002","好好加班",new Date(), true, false, true);
                 chat.addTalkMsgUserLeft("002","好好学习", new Date(), true, false, true);
-                chat.addTalkBox(0, 0, "006", "尚宇驰学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/lADPDgQ9rjEky8fNAbDNAbA_432_432.jpg", "大哥", new Date(), true);
+                chat.addTalkBox(0, 0, "006", "尚宇驰学姐", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/syc.jpg", "大哥", new Date(), true);
 //                chat.addTalkMsgRight("006","好好加班",new Date(), true, false, false);
                 chat.addTalkMsgUserLeft("006","明天一起打羽毛球哈", new Date(), false, false, true);
+
+                // 群组
+                chat.addFriendGroup("2000001","松山院","https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/ssy.png");
+
+                // 群组 - 对话框
+                chat.addTalkBox(0,1, "0001", "松山院", "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/ssy.png","", new Date(), false);
+                chat.addTalkMsgRight("0001", "松山院与我们同在", new Date(), true, true, false);
+
+                // 好友
+                chat.addFriendUser(false, "008", "许老师","https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/mqxu.jpg");
+                chat.addFriendUser(false, "007", "杨阳学长","https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/yy.jpg");
+                chat.addFriendUser(false, "006", "尚宇驰学姐","https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/syc.jpg");
+                chat.addFriendUser(false, "005", "陈蓉琪学姐","https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/crq.jpg");
+                chat.addFriendUser(false, "004", "王林学姐","https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/wl.jpg");
+                chat.addFriendUser(false, "003", "张怡沁学姐","https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/zyq.jpg");
+                chat.addFriendUser(false, "001", "张浩杰学长","https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/zhj.jpg");
+                chat.addFriendUser(false, "002", "王锋学长","https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/wf.jpg");
             }
         });
         login.doShow();
