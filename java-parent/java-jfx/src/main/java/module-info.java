@@ -7,6 +7,8 @@ module com.example.java.jfx {
 
     requires java.desktop;
 
+//    requires javafx.web;
+
     opens com.example.java.jfx.util to javafx.fxml;
     exports com.example.java.jfx.util;
 
@@ -27,4 +29,7 @@ module com.example.java.jfx {
 
     opens com.example.java.jfx.basic.animate to javafx.fxml;
     exports com.example.java.jfx.basic.animate;
+
+    opens com.example.java.jfx.basic.control to javafx.fxml;
+    exports com.example.java.jfx.basic.control;
 }
