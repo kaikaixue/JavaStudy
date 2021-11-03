@@ -11,6 +11,8 @@
         <module name="netty-demo-1-11" />
         <module name="netty-demo-2-02" />
         <module name="netty-demo-1-10" />
+        <module name="netty-demo-2-03" />
+        <module name="netty-demo-2-04" />
         <module name="netty-demo-1-04" />
         <module name="netty-demo-1-03" />
         <module name="netty-demo-1-02" />
