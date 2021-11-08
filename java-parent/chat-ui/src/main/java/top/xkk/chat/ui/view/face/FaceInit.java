@@ -42,7 +42,7 @@ public abstract class FaceInit extends UIObject {
         // 模态窗口
         initModality(Modality.APPLICATION_MODAL);
         initOwner(obj);
-        //初始化页面和事件
+        // 初始化页面和事件
         obtain();
         initView();
         initEventDefine();

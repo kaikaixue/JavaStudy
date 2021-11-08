@@ -11,4 +11,5 @@ public interface IFaceMethod {
      * @param y 显示位置的y坐标
      */
     void doShowFace(Double x, Double y);
+
 }

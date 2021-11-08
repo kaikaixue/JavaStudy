@@ -4,6 +4,7 @@ package top.xkk.chat.ui.view.chat.data;
  * 对话数据
  */
 public class TalkBoxData {
+
     /**
      * 对话Id
      */

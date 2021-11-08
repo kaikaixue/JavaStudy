@@ -1,6 +1,7 @@
 package top.xkk.chat.ui.view.chat;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public abstract class ChatInit extends UIObject {
+
     private static final String RESOURCE_NAME = "view/chat/chat.fxml";
 
     /**
@@ -27,7 +29,7 @@ public abstract class ChatInit extends UIObject {
     /**
      * 用户头像
      */
-    public String userHead = "https://javafx-study.oss-cn-hangzhou.aliyuncs.com/avatar/x.jpg";
+    public String userHead;
 
     public IChatEvent chatEvent;
 
@@ -46,11 +48,10 @@ public abstract class ChatInit extends UIObject {
         Scene scene = new Scene(root, 1243, 820);
         scene.setFill(Color.TRANSPARENT);
         setScene(scene);
-        // 设置窗口置顶
-        ((Stage) scene.getWindow()).setAlwaysOnTop(true);
+        //设置窗口置顶
+        //((Stage) scene.getWindow()).setAlwaysOnTop(true);
         initStyle(StageStyle.TRANSPARENT);
         setResizable(false);
-        //this.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("view/chat/img/head/logo.png"))));
         obtain();
         initView();
         initEventDefine();
@@ -59,5 +60,9 @@ public abstract class ChatInit extends UIObject {
     private void obtain() {
         // 可以预加载
         txtInput = $("txt_input", TextArea.class);
+    }
+
+    public Parent root(){
+        return super.root;
     }
 }

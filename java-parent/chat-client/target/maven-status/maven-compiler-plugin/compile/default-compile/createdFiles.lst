@@ -1,0 +1,5 @@
+top\xkk\chat\client\infrastructure\util\BeanUtil.class
+module-info.class
+top\xkk\chat\client\socket\handler\SearchFriendHandler.class
+top\xkk\chat\client\application\UIService.class
+top\xkk\chat\client\event\LoginEvent.class

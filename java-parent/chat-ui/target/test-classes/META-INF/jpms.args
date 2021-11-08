@@ -1,0 +1,4 @@
+--patch-module
+top.xkk.chat.ui=_
+--add-reads
+top.xkk.chat.ui=ALL-UNNAMED

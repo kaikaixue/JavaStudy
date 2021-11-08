@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
+import top.xkk.chat.ui.param.AppConst;
 import top.xkk.chat.ui.view.chat.data.RemindCount;
 import top.xkk.chat.ui.view.chat.data.TalkBoxData;
 import top.xkk.chat.ui.view.chat.data.TalkData;
@@ -138,10 +139,14 @@ public class ElementTalk {
 
     public void fillMsgSketch(String talkSketch, Date talkDate) {
         if (null != talkSketch) {
-            if (talkSketch.length() > 30) talkSketch = talkSketch.substring(0, 30);
+            if (talkSketch.length() > AppConst.TALK_SKETCH_LENGTH) {
+                talkSketch = talkSketch.substring(0, AppConst.TALK_SKETCH_LENGTH);
+            }
             msgSketch.setText(talkSketch);
         }
-        if (null == talkDate) talkDate = new Date();
+        if (null == talkDate) {
+            talkDate = new Date();
+        }
         // 格式化信息
         String talkSimpleDate = DateUtil.simpleDate(talkDate);
         msgData.setText(talkSimpleDate);
@@ -154,4 +159,5 @@ public class ElementTalk {
     public Label msgRemind() {
         return msgRemind;
     }
+
 }

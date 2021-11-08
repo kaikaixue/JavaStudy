@@ -8,15 +8,25 @@ import top.xkk.chat.ui.view.chat.IChatMethod;
 /**
  * 设置表情框位置
  */
-public class FaceController extends FaceInit implements IFaceMethod{
+public class FaceController extends FaceInit implements IFaceMethod {
+
     private FaceView faceView;
 
-    public FaceController(UIObject obj, ChatInit chatinit, IChatEvent chatEvent, IChatMethod chatMethod) {
+    /**
+     * 通过构造方法将控制器需要的值传入
+     *
+     * @param obj        抽象的父类窗体对象
+     * @param chatInit   聊天框
+     * @param chatEvent  聊天框事件
+     * @param chatMethod 聊天框方法
+     */
+    public FaceController(UIObject obj, ChatInit chatInit, IChatEvent chatEvent, IChatMethod chatMethod) {
         super(obj);
-        this.chatInit = chatinit;
+        this.chatInit = chatInit;
         this.chatEvent = chatEvent;
         this.chatMethod = chatMethod;
     }
+
 
     @Override
     public void initView() {

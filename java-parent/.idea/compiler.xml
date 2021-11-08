@@ -13,7 +13,10 @@
         <module name="chat-ui" />
         <module name="weather-app" />
         <module name="notepad" />
+        <module name="chat-client" />
         <module name="java-basic" />
+        <module name="chat-server-ddd" />
+        <module name="chat-server-agreement" />
         <module name="linechart" />
       </profile>
     </annotationProcessing>
@@ -21,6 +24,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="chat-server-agreement" options="-parameters" />
+      <module name="chat-server-ddd" options="-parameters" />
       <module name="weather-app" options="" />
     </option>
   </component>

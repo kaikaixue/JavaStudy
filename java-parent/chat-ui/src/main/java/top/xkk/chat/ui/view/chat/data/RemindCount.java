@@ -4,6 +4,7 @@ package top.xkk.chat.ui.view.chat.data;
  * 消息提醒
  */
 public class RemindCount {
+
     /**
      * 消息提醒条数
      */

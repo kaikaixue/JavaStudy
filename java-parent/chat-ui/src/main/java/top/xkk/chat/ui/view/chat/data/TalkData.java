@@ -4,6 +4,7 @@ package top.xkk.chat.ui.view.chat.data;
  * 对话框用户数据
  */
 public class TalkData {
+
     private String talkName;
     private String talkHead;
 
@@ -30,4 +31,5 @@ public class TalkData {
     public void setTalkHead(String talkHead) {
         this.talkHead = talkHead;
     }
+
 }
