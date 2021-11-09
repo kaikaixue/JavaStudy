@@ -1,0 +1,2 @@
+className=top.xkk.java.basic.reflection.Person
+methodName=getPerson
